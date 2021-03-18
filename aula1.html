@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma em Javascript</title>
+</head>
+<body>
+    <h1>Operação de soma</h1>
+    <p>Calcular a soma dos valores</p>
+
+    <form id="form">
+        <input type="number" id="field1" placeholder="Digite o valor">
+        <input type="number" id="field2" placeholder="Digite o segundo valor">
+        <button>Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function onSubmit(event)
+        {
+            event.preventDefault()
+
+            let valor1 = parseFloat(field1.value)
+            let valor2 = parseFloat(field2.value)
+
+            if(isNaN(valor1))
+            {
+                result.innerHTML = '<p>Informe o primeiro valor valido</p>'
+                return
+            }
+
+            if(isNaN(valor2))
+            {
+                result.innerHTML = '<p>Informe o segundo valor valido</p>'
+                return
+            }
+
+            let soma = valor1 + valor2
+
+            result.innerHTML = `Soma: <b>${soma}</b>`
+        }
+        form.addEventListener('submit', onSubmit)
+    </script>
+</body>
+</html>
