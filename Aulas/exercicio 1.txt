@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação em Microinformática - Exemplo 04</title>
+    <title>Programação em Microinformática</title>
 </head>
 
 <body>
-    <h1>Exemplo 04</h1>
-    <p>Calcula o valor com desconto a partir do preço e do percentual de desconto.</p>
+    <h1>ADS JAVASCRIP</h1>
+    <p>Contando do maior para o menor.</p>
 
     <form id="form">
         <input id="field1" type="number" placeholder="Digite o primeiro valor">
