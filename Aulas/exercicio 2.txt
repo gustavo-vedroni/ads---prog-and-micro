@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em Microinformática - Exemplo 04</title>
+</head>
+
+<body>
+    <h1>Exemplo 04</h1>
+    <p>Calcula o valor com desconto a partir do preço e do percentual de desconto.</p>
+
+    <form id="form">
+        <input id="field1" type="number" placeholder="Digite o primeiro valor">
+        <button>Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+
+        function onSubmit(event) {
+
+            event.preventDefault()
+
+            let num = parseFloat(field1.value)        
+            
+            
+            
+            for (let i = 1; i <= 10; i++)
+            {
+                let resultado = num * i;
+                result.innerHTML += `<li>${i} × ${num} = <strong>${resultado}</strong></li>`
+            }
+            
+            
+            
+        }
+        form.addEventListener('submit', onSubmit)
+    </script>
+</body>
+
+</html>

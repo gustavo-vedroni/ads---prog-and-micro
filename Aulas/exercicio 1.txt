@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação em Microinformática - Exemplo 04</title>
+</head>
+
+<body>
+    <h1>Exemplo 04</h1>
+    <p>Calcula o valor com desconto a partir do preço e do percentual de desconto.</p>
+
+    <form id="form">
+        <input id="field1" type="number" placeholder="Digite o primeiro valor">
+        <input id="field2" type="number" placeholder="Digite o segundo valor">
+        <button>Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+
+        function onSubmit(event) {
+
+            event.preventDefault()
+
+            let value1 = parseFloat(field1.value)
+            let value2 = parseFloat(field2.value)
+
+            if (isNaN(value1)) {
+                result.innerHTML = '<p>Por favor, informe o primeiro valor valido.</p>'
+                return
+            }
+
+            if (isNaN(value2)) {
+                result.innerHTML = '<p>Por favor, informe o segundo valor valido.</p>'
+                return
+            }
+
+
+            var arr = [];
+            if(value1 <= value2)
+            {
+                while (value1 <= value2) 
+                {
+                    arr.push(value1++);
+                }
+            }
+            else
+            {
+                while (value2 <= value1) 
+                {
+                    arr.push(value2++);
+                }
+            }
+            if (value2 > value1)
+            {
+                arr.sort(function (value1, value2) { return value2 - value1 });
+            }
+            else
+            {
+                arr.sort(function (value1, value2) { return value2 - value1 });
+            }
+
+
+            result.innerHTML = arr
+        }
+        form.addEventListener('submit', onSubmit)
+    </script>
+</body>
+
+</html>
