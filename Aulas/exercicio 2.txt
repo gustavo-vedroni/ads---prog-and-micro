@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <h1>Exemplo 04</h1>
-    <p>Calcula o valor com desconto a partir do preço e do percentual de desconto.</p>
+    <h1>Exercicio 2</h1>
+    <p>Multiplicação de um valor até o 10</p>
 
     <form id="form">
-        <input id="field1" type="number" placeholder="Digite o primeiro valor">
+        <input id="field1" type="number" placeholder="Digite o valor">
         <button>Calcular</button>
     </form>
 
